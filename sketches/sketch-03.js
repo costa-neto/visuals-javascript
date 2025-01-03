@@ -11,7 +11,7 @@ const sketch = ({ context, width, height }) => {
 
   for (let i = 0; i < 40; i++) {
     const x = random.range(0, width);
-    const y = random.range(0, width);;
+    const y = random.range(0, height);;
 
     agents.push(new Agent(x, y));
   }
@@ -21,7 +21,7 @@ const sketch = ({ context, width, height }) => {
     context.fillRect(0, 0, width, height);
 
     agents.forEach(agent => {
-      agent.draw();
+      agent.draw(context);
     })
   };
 };
